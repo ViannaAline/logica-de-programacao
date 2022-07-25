@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio</title>
+</head>
+<body>
+    <script>
+        var numero = parseFloat(prompt("Digite um número:"));
+
+        var indice = 0;
+
+        while(indice <= 1000) {
+            document.write(numero + " x " + indice + " = " + (numero * indice) + " <br> ");
+
+            if (indice % 10 === 0 && indice > 0) {
+                document.write("<hr>");
+            }
+
+            indice = indice + 1;
+
+        }
+    </script>
+</body>
+</html>
