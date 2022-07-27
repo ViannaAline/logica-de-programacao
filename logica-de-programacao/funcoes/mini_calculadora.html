@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini calculadora</title>
+</head>
+
+<body>
+    <button onclick="iniciarCalculo('+')">+</button>
+    <button onclick="iniciarCalculo('-')">-</button>
+    <button onclick="iniciarCalculo('*')">*</button>
+    <button onclick="iniciarCalculo('/')">/</button>
+
+    <div id="output"> </div>
+
+    <script>
+
+        var n2 = parseFloat(prompt("Digite um número:"));
+
+        escreve(n2);
+
+        function iniciarCalculo(simbolo) {
+            var n1 = document.querySelector("#output").textContent;
+
+            var n2 = parseFloat(prompt("Digite outro número:"));
+
+            var msg = calcular(simbolo, n1, n2);
+
+            escreve(msg);
+        }
+
+        function escreve(mensagem) {
+            var output = document.querySelector("#output");
+            output.innerHTML = mensagem;
+
+            //  alert(n1);
+        }
+
+
+        function calcular(simbolo, n1, n2) {
+
+            var numeroCalculado = null;
+
+            switch (simbolo) {
+                case '+': numeroCalculado = n1 + n2;
+                    break;
+                case '-': numeroCalculado = n1 - n2;
+                    break;
+                case '*': numeroCalculado = n1 * n2;
+                    break;
+                case '/': numeroCalculado = n1 / n2;
+            }
+
+            return numeroCalculado;
+        }
+    </script>
+</body>
+
+</html>
