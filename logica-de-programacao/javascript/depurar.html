@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>depurar javascript no browser</title>
+</head>
+
+<body>
+    <button onclick="calcular('+')">+</button>
+    <button onclick="calcular('-')">-</button>
+    <button onclick="calcular('*')">*</button>
+    <button onclick="calcular('/')">/</button>
+
+    <div id="output"> </div>
+
+    <script>
+
+        console.log('testando meu codigo');
+
+        var n1 = parseFloat(prompt("Digite um número:"));
+
+        escreve();
+
+        function escreve() {
+            console.log('-------------');
+            console.log(n1);
+        }
+
+
+        function calcular(simbolo) {
+
+            var n = parseFloat(prompt('Digite outro numero'));
+
+            var numeroCalculado = null;
+
+            switch (simbolo) {
+                case '+': n1 = n1 + n;
+                    break;
+                case '-': n1 = n1 - n;
+                    break;
+                case '*': n1 = n1 * n;
+                    break;
+                case '/': n1 = n1 / n;
+            }
+
+            escreve();
+        }
+
+
+    </script>
+</body>
+
+</html>
