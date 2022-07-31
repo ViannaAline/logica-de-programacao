@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>literais e callbacks</title>
+</head>
+
+<script>
+
+    // literal
+    function somar(n1, n2) {
+        // corpo da funcao
+        return n1 + n2;
+    };
+
+    var soma = somar(10, 20);
+    console.log('Resultado: ', soma);
+
+    somar.teste = 'propriedade da funcao';
+
+    console.log(somar.teste);
+
+    var teste = function (str) {
+        console.log('teste', str);
+    }; // quando atrelar a uma variavel precisa terminar com ;
+
+    teste('ola');
+
+    var teste1 = function abacaxi(f) {
+        f();
+    };
+
+    teste1(function () {
+        console.log('funcao passada por parametro');
+    });
+
+    console.log('------------------------');
+
+    var x = 0; // escopo global
+    var y;
+
+    function mostraX() {
+        var x = 10; // escopo local - dentro da funcao
+        var y = 20;
+       // x = 10; substitui a variavel inicial
+        console.log('mostra x dentro da função: ', x);
+        console.log('mostra y dentro da função: ', y);
+    }
+
+    mostraX();
+
+    console.log('mostra x fora: ', x);
+    console.log('mostra y fora: ', y);
+
+</script>
+
+<body>
+    <h2>Funções literais e callbacks</h2>
+</body>
+
+</html>
