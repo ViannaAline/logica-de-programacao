@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objeto Document</title>
+</head>
+
+<body>
+    <h2>Objeto Document</h2>
+
+    <main class="cmain" id="idmain">
+        <h2>subtitulo</h2>
+        <p id="pmain">Praesent ac purus et risus eleifend cursus.</p>
+    </main>
+
+    <section class="csection" id="idsection">
+        <h3>subtitulo</h3>
+        <p class="paragrafos">Nullam massa eros, maximus ac dapibus in, finibus faucibus ex.</p>
+        <p class="paragrafos">Cras et blandit magna. Phasellus at vestibulum leo.</p>
+    </section>
+
+    <script>
+
+        alert('vai mudar');
+        document.querySelector('h2').textContent = 
+        'Paragrafo alterado via javascript';
+    
+    </script>
+
+</body>
+</html>
