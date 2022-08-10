@@ -22,10 +22,18 @@
     <script>
 
         function Caneta(preco, cor) {
+
+            var color = cor || 'black';
             this.preco = preco || 1;
-            this.cor = cor || 'black';
-            this.mudarCor = function(cor) {
-                this.cor = cor;
+
+            this.mudarCor = function (cor) {
+                if (color !== 'red' && color !== 'yellow' && color !== 'black') {
+                    return;
+                }
+                color = cor;
+            }
+            this.pegaCor = function () {
+                return color;
             }
         }
 

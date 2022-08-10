@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>objetos construtores</title>
+    <title>operadores new</title>
 
     <link href="/logica-de-programacao/css/bootstrap.css" rel="stylesheet">
     <link href="/logica-de-programacao/css/bootstrap-theme.css" rel="stylesheet">
@@ -21,16 +21,26 @@
 
     <script>
 
-        function Caneta(preco, cor) {
-            this.preco = preco || 1;
-            this.cor = cor || 'black';
-            this.mudarCor = function(cor) {
-                this.cor = cor;
-            }
-        }
+        var pessoa1 = {
+            nome: 'Maria',
+            sobrenome: 'Aparecida',
+        };
 
-        var caneta1 = new Caneta(2, 'red');
+        var pessoa2 = {
+            nome: 'Marcos',
+            sobrenome: 'Vinicius',
+        };
 
+        var pessoa3 = {
+            nome: 'João',
+            sobrenome: 'Souza',
+        };
+
+        console.log(pessoa1.nome + ' ' + pessoa1.sobrenome);
+        console.log(pessoa2.nome + ' ' + pessoa2.sobrenome);
+        console.log(pessoa3.nome + ' ' + pessoa3.sobrenome);
+
+        
 
     </script>
 
