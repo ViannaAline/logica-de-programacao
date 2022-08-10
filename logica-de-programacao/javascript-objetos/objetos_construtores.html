@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sintaxe formal e literal</title>
+
+    <link href="/logica-de-programacao/css/bootstrap.css" rel="stylesheet">
+    <link href="/logica-de-programacao/css/bootstrap-theme.css" rel="stylesheet">
+
+    <script src="/logica-de-programacao/beluga.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+
+    <script>
+
+        function Caneta(preco, cor) {
+            this.preco = preco || 1;
+            this.cor = cor || 'black';
+            this.mudarCor = function(cor) {
+                this.cor = cor;
+            }
+        }
+
+        var caneta1 = new Caneta(2, 'red');
+
+
+    </script>
+
+</body>
+
+</html>
