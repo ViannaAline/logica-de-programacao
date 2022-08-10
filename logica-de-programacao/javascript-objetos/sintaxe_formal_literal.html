@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sintaxe formal e literal</title>
+
+    <link href="/logica-de-programacao/css/bootstrap.css" rel="stylesheet">
+    <link href="/logica-de-programacao/css/bootstrap-theme.css" rel="stylesheet">
+
+    <script src="/logica-de-programacao/beluga.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+
+    <script>
+
+        var hoje = new Date();
+
+        var x = [0];
+
+        function mudaArr(x) {
+            var y = x;
+            y.push(2);
+            x.push(3);
+        }
+
+        mudaArr(x);
+
+        var n = 0;
+
+        function mudaN(n) {
+            var n2 = n;
+            console.log(++n2);
+        }
+
+        mudaN(n);
+        console.log(n);
+
+        function mudaCor(cor) {
+            console.log(this);
+            this.cor = cor;
+        }
+
+        var caneta1 = {
+            cor: 'red',
+            preco: 1,
+            mudarCor: mudaCor,
+            }
+        
+
+        var caneta2 = {
+            cor: 'blue',
+            preco: 2,
+            mudarCor: mudaCor,
+            }
+
+        caneta1.mudarCor('green');
+        console.log(caneta1);
+        console.log(caneta2);
+
+
+    </script>
+
+</body>
+
+</html>
